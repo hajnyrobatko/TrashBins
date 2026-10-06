@@ -1,0 +1,13 @@
+# TLC-generated state and output files
+trash_bins.toolbox/model_*/MC.out
+trash_bins.toolbox/model_*/MC_TE.out
+trash_bins.toolbox/model_*/MC.st
+trash_bins.toolbox/model_*/MC-*.st
+trash_bins.toolbox/model_*/MC_*.fp
+trash_bins.toolbox/model_*/nodes_*
+trash_bins.toolbox/model_*/ptrs_*
+trash_bins.toolbox/model_*/[0-9][0-9]-[0-9][0-9]-[0-9][0-9]-*/
+
+# Timestamped Toolbox snapshots
+trash_bins.toolbox/model_*_SnapShot_*/
+trash_bins.toolbox/trash_bins___model_*_SnapShot_*.launch
