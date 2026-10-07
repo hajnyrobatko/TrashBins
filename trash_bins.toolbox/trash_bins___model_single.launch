@@ -5,13 +5,13 @@
     <stringAttribute key="distributedNetworkInterface" value="131.155.192.228"/>
     <intAttribute key="distributedNodesCount" value="1"/>
     <stringAttribute key="distributedTLC" value="off"/>
-    <intAttribute key="fpIndex" value="121"/>
+    <intAttribute key="fpIndex" value="88"/>
     <intAttribute key="maxHeapSize" value="25"/>
     <stringAttribute key="modelBehaviorInit" value=""/>
     <stringAttribute key="modelBehaviorNext" value=""/>
     <stringAttribute key="modelBehaviorSpec" value="Spec"/>
     <intAttribute key="modelBehaviorSpecType" value="1"/>
-    <stringAttribute key="modelBehaviorVars" value="trapDoorOpen, binSensor, serverRequests, ramExtended, trapDestroyed, userTrash, pc, scanMsg, serverResponses, permissions, req, outerDoorLocked, scans, binCommand, outerDoorOpen, truckCommand, perm, trashInTop, trashCompressed, trashUncompressed, serverMsg, trashCapacity"/>
+    <stringAttribute key="modelBehaviorVars" value="trapDoorOpen, binSensor, serverRequests, ramExtended, trapDestroyed, userTrash, pc, scanMsg, serverResponses, permissions, req, outerDoorLocked, scans, binCommand, outerDoorOpen, truckCommand, perm, trashInTop, trashCompressed, trashUncompressed, serverMsg, trashCapacity, userAuthorized"/>
     <stringAttribute key="modelComments" value=""/>
     <booleanAttribute key="modelCorrectnessCheckDeadlock" value="true"/>
     <listAttribute key="modelCorrectnessInvariants">
@@ -19,9 +19,13 @@
         <listEntry value="1MessagesOK"/>
         <listEntry value="1OuterDoorLocked"/>
         <listEntry value="1RamOuterDoor"/>
+        <listEntry value="1AuthorizedOpenOnly"/>
     </listAttribute>
     <listAttribute key="modelCorrectnessProperties">
         <listEntry value="1TrashEmptied"/>
+        <listEntry value="1UserTrash"/>
+        <listEntry value="1UserTrashDeposited"/>
+        <listEntry value="1TruckEmpties"/>
     </listAttribute>
     <intAttribute key="modelEditorOpenTabs" value="8"/>
     <stringAttribute key="modelExpressionEval" value=""/>
