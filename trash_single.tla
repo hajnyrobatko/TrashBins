@@ -315,7 +315,7 @@ begin
         
     \* Report the completion and keep track of ID of bin emptied.    
     TruckDone:
-        truckCommand := [command |-> "emptied", bin |-> truckCommand.bin];
+        truckCommand.command := "emptied";
     end while;
 end process;
 
@@ -360,7 +360,7 @@ begin
             
         AwaitDoorUnlocked:
             await binCommand.command = "finished";
-        
+            
         \* Permit users access.
         PermitUserAccess:    
             write(permissions, [user |-> scanMsg.user, bin |-> scanMsg.bin, granted |-> TRUE]);
@@ -425,7 +425,7 @@ end process;
 
 
 end algorithm; *)
-\* BEGIN TRANSLATION (chksum(pcal) = "7e3ab7f" /\ chksum(tla) = "5cc6151f")
+\* BEGIN TRANSLATION (chksum(pcal) = "5ede3ba4" /\ chksum(tla) = "a7de200")
 VARIABLES outerDoorOpen, outerDoorLocked, trapDoorOpen, ramExtended, 
           trashInTop, trashCompressed, trashUncompressed, trashCapacity, 
           trapDestroyed, userAuthorized, userTrash, binCommand, binSensor, 
@@ -896,7 +896,7 @@ TruckFinishEmpty(self) == /\ pc[self] = "TruckFinishEmpty"
                                           req, scanMsg, serverMsg >>
 
 TruckDone(self) == /\ pc[self] = "TruckDone"
-                   /\ truckCommand' = [command |-> "emptied", bin |-> truckCommand.bin]
+                   /\ truckCommand' = [truckCommand EXCEPT !.command = "emptied"]
                    /\ pc' = [pc EXCEPT ![self] = "TruckStart"]
                    /\ UNCHANGED << outerDoorOpen, outerDoorLocked, 
                                    trapDoorOpen, ramExtended, trashInTop, 
@@ -1193,6 +1193,6 @@ Spec == /\ Init /\ [][Next]_vars
 
 =============================================================================
 \* Modification History
-\* Last modified Wed Oct 07 18:31:37 CEST 2026 by robin
+\* Last modified Tue Oct 13 14:24:13 CEST 2026 by robin
 \* Last modified Mon Oct 05 15:27:09 CEST 2026 by sva20
 \* Last modified Mon Oct 05 13:41:28 CEST 2026 by sva20
