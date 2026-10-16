@@ -2,30 +2,30 @@
 EXTENDS trash_bins, TLC
 
 \* CONSTANT definitions @modelParameterConstants:0NumBins
-const_1791889388786226000 == 
+const_1792149180979282000 == 
 2
 ----
 
 \* CONSTANT definitions @modelParameterConstants:1NumUsers
-const_1791889388786227000 == 
+const_1792149180979283000 == 
 1
 ----
 
 \* CONSTANT definitions @modelParameterConstants:2NumTrucks
-const_1791889388786228000 == 
+const_1792149180979284000 == 
 1
 ----
 
 \* CONSTANT definitions @modelParameterConstants:3MaxCapacity
-const_1791889388786229000 == 
-3
+const_1792149180979285000 == 
+7
 ----
 
 \* CONSTANT definitions @modelParameterConstants:4MaxUserTrash
-const_1791889388786230000 == 
+const_1792149180979286000 == 
 2
 ----
 
 =============================================================================
 \* Modification History
-\* Created Tue Oct 13 13:03:08 CEST 2026 by robin
+\* Created Fri Oct 16 13:13:00 CEST 2026 by robin

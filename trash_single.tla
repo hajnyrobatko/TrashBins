@@ -313,7 +313,7 @@ begin
     TruckFinishEmpty:
         await binCommand.command = "finished";
         
-    \* Report the completion and keep track of ID of bin emptied.    
+    \* Report the completion. 
     TruckDone:
         truckCommand.command := "emptied";
     end while;
@@ -1193,6 +1193,6 @@ Spec == /\ Init /\ [][Next]_vars
 
 =============================================================================
 \* Modification History
-\* Last modified Tue Oct 13 14:24:13 CEST 2026 by robin
+\* Last modified Fri Oct 16 10:52:29 CEST 2026 by robin
 \* Last modified Mon Oct 05 15:27:09 CEST 2026 by sva20
 \* Last modified Mon Oct 05 13:41:28 CEST 2026 by sva20
